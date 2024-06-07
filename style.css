@@ -62,7 +62,7 @@ h1 {
 }
 
 .list a {
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -154,4 +154,63 @@ footer p {
 
 footer span {
   font-weight: 800;
+}
+
+.menu-label,
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    gap: 20px;
+  }
+
+  .list {
+    position: absolute;
+    top: 55px;
+    left: 5%;
+    right: 5%;
+    flex-direction: column;
+    width: 90%;
+    background: #212121;
+    border: 2px solid white;
+    border-top: 0;
+    border-radius: 0px 0px 15px 15px;
+    gap: 25px;
+    padding: 45px 0;
+    display: none;
+  }
+
+  .menu-icon {
+    position: absolute;
+    top: 10px;
+  }
+
+  .menu-label {
+    display: flex;
+  }
+
+  .tutorial video {
+    width: 70%;
+  }
+
+  .caja {
+    width: 300px;
+  }
+}
+
+#menu-toggle:checked + .list {
+  display: flex;
+}
+
+@media (max-width: 576px) {
+  .caja {
+    flex-wrap: nowrap;
+    max-width: 250px;
+  }
+
+  .tutorial video {
+    max-width: 100%;
+  }
 }
